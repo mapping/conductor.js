@@ -94,7 +94,7 @@ if (typeof MutationObserver !== 'undefined' || typeof WebkitMutationObserver !==
   });
 
   test("HeightConsumer will autoupdate by default", function() {
-    expect(3);
+    expect(5);
     stop();
     stop();
 
@@ -109,8 +109,8 @@ if (typeof MutationObserver !== 'undefined' || typeof WebkitMutationObserver !==
         // dom enlargement and one post.  This is fine in real life as losing
         // the race only means a benign resize, but we work around it here.
         if (width > 100) {
-          equal(width, 614, "HeightService updated width");
-          equal(height, 714, "HeightService updated height");
+          within($(card.sandbox.el).width(), 610, 620, "HeightService updated width");
+          within($(card.sandbox.el).height(), 700, 720, "HeightService updated height");
           start();
         }
       });
