@@ -22,7 +22,11 @@
     "test",
     "tests"
   ],
+  "dependencies": {
+    "Oasis.js": "git://github.com/tildeio/oasis.js.git#17d22e217bbe7553fac556b2d40750b2ee36be59"
+  },
   "devDependencies": {
-    "Oasis.js": "git://github.com/tildeio/oasis.js.git#master"
+    "qunit": "1.12.0",
+    "jquery": "1.9.1"
   }
 }
